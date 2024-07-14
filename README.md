@@ -150,3 +150,5 @@ Contributions are welcome! Here's how you can contribute to this project:
 - Make modifications and commit changes (`git commit -am 'Add feature'`)
 - Push to the branch (`git push origin feature`)
 - Create a Pull Request
+
+Thank you!
