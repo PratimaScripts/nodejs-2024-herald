@@ -6,7 +6,7 @@
 
 - **Module Title:** Backend Node JS
 - **Module Overview:** This module aims to provide students with a solid grasp of key concepts, principles, and best practices in backend development using Node.js. Students will learn to build efficient and scalable server-side applications, manage databases, and implement RESTful APIs, laying the groundwork for robust backend programming skills.
-- **Tutor / TA:** Ms. Pratima Gautam
+- **Tutor / TA:** Ms. Pratima Gautam / Mr. Sachin Shrestha
 
 ### Assessments
 
