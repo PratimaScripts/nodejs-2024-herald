@@ -6,7 +6,7 @@
 
 - **Module Title:** Backend Node JS
 - **Module Overview:** This module aims to provide students with a solid grasp of key concepts, principles, and best practices in backend development using Node.js. Students will learn to build efficient and scalable server-side applications, manage databases, and implement RESTful APIs, laying the groundwork for robust backend programming skills.
-- **Tutor / TA:** Ms. Pratima Gautam / Mr. Sachin Shrestha
+- **Tutor / TA:** Ms. Pratima Gautam / Mr. Sachin Sherchan
 
 ### Assessments
 
@@ -23,6 +23,7 @@
 ### Week 1
 
 - **Introduction to Node.js**
+
   - What is Node.js?
   - Why use Node.js?
   - Installing Node.js and npm
@@ -35,6 +36,7 @@
   - **Hands-on Exercise:** Write a simple Node.js script to read a file and print its contents
 
 - **Asynchronous Programming in Node.js**
+
   - Understanding callbacks
   - Introduction to Promises and async/await
   - Event-driven Architecture
@@ -56,6 +58,7 @@
 ### Week 2
 
 - **Introduction to Express.js**
+
   - What is Express.js?
   - Why use Express.js?
   - Setting Up Express.js
@@ -66,6 +69,7 @@
   - **Hands-on Exercise:** Build a simple Express.js server with basic routes
 
 - **Understanding Middleware**
+
   - What is middleware?
   - Types of middleware (built-in, third-party, custom)
   - Using Built-in Middleware
@@ -85,6 +89,7 @@
 ### Week 3
 
 - **Introduction to REST**
+
   - What is REST?
   - Principles of RESTful APIs
   - Designing RESTful Endpoints
@@ -93,6 +98,7 @@
   - **Hands-on Exercise:** Create a basic CRUD API structure
 
 - **Introduction to Databases**
+
   - Overview of popular databases (MongoDB, MySQL)
   - Using a Database with Express.js
     - Setting up MongoDB (or another database)
@@ -124,22 +130,22 @@ To run this project locally, follow these steps:
 
 2. **Install Dependencies:**
 
-    ```bash
-    npm install
-    ```
+   ```bash
+   npm install
+   ```
 
 3. **Set Up Environment Variables:**
 
-    - Rename `.env.example` file to `.env`.
-    - Add necessary environment variables like database credentials, API keys, etc.
+   - Rename `.env.example` file to `.env`.
+   - Add necessary environment variables like database credentials, API keys, etc.
 
 4. **Start the Server:**
 
-    ```bash
-    npm start
-    ```
+   ```bash
+   npm start
+   ```
 
-    Open <http://localhost:3000> in your browser.
+   Open <http://localhost:3000> in your browser.
 
 ## Contributing
 
