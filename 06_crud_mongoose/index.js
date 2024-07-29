@@ -10,14 +10,24 @@ const booksSearch = require("./routes/bookSearch");
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Default Configuration for CORS
-
+// Middleware for handling CORS POLICY
+// Option 1: Default Configuration for CORS (Allow All Origins with Default of cors(*))
 // {
 //   "origin": "*",
 //   "methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
 //   "preflightContinue": false,
 //   "optionsSuccessStatus": 204
 // }
+
+app.use(cors());
+// Option 2: Allow Custom Origins
+// app.use(
+//   cors({
+//     origin: 'http://localhost:3000',
+//     methods: ['GET', 'POST', 'PUT', 'DELETE'],
+//     allowedHeaders: ['Content-Type'],
+//   })
+// );
 
 //base url
 app.use(path, handler)
