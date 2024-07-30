@@ -30,7 +30,7 @@ app.use(cors());
 // );
 
 //base url
-app.use(path, handler)
+// app.use(path, handler)
 app.use("/api/books", booksRouter);
 app.use("/api/search", booksSearch);
 
