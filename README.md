@@ -119,8 +119,6 @@
 
 ## Setup
 
-To run this project locally, follow these steps:
-
 1. **Clone the repository:**
 
    ```bash
@@ -129,10 +127,17 @@ To run this project locally, follow these steps:
    ```
 
 2. **Install Dependencies:**
+  Go to individual folder and run the following command if you see package.json file.
 
    ```bash
    npm install
    ```
+
+    If you don't see package.json file, you can simply run
+
+    ```bash
+    node filename.js
+    ```
 
 3. **Set Up Environment Variables:**
 
@@ -144,17 +149,5 @@ To run this project locally, follow these steps:
    ```bash
    npm start
    ```
-
-   Open <http://localhost:3000> in your browser.
-
-## Contributing
-
-Contributions are welcome! Here's how you can contribute to this project:
-
-- Fork the repository
-- Create a new branch (`git checkout -b feature`)
-- Make modifications and commit changes (`git commit -am 'Add feature'`)
-- Push to the branch (`git push origin feature`)
-- Create a Pull Request
 
 Thank you!
