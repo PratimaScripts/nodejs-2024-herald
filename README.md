@@ -5,7 +5,9 @@
 ### Module Details
 
 - **Module Title:** Backend Node JS
+
 - **Module Overview:** This module aims to provide students with a solid grasp of key concepts, principles, and best practices in backend development using Node.js. Students will learn to build efficient and scalable server-side applications, manage databases, and implement RESTful APIs, laying the groundwork for robust backend programming skills.
+
 - **Tutor / TA:** Ms. Pratima Gautam / Mr. Sachin Sherchan
 
 ### Assessments
@@ -123,11 +125,21 @@
 
    ```bash
    git clone https://github.com/yourusername/nodejs-summer-enrichment.git
+   
    cd nodejs-summer-enrichment
    ```
 
 2. **Install Dependencies:**
-  Go to individual folder and run the following command if you see package.json file.
+
+    Go to individual folder and run the following command if you see package.json file. There are different package managers like npm, yarn, etc.
+
+    <https://www.npmjs.com/>
+
+    <https://yarnpkg.com/>
+
+    <https://pnpm.io/>
+
+    Here, we are using npm.
 
    ```bash
    npm install
@@ -141,13 +153,31 @@
 
 3. **Set Up Environment Variables:**
 
-   - Rename `.env.example` file to `.env`.
-   - Add necessary environment variables like database credentials, API keys, etc.
+    The project uses environment variables to store sensitive information. A .env file or dotenv file is a simple text configuration file for containining our applications environment constants.
+
+    To set up environment variables:
+
+    - Rename `.env.example` file to `.env`.
+    - Add necessary environment variables like database credentials, JWT secrets, URL and API keys, etc. as per your need.
 
 4. **Start the Server:**
+
+    Start the server with necessary start command.
 
    ```bash
    npm start
    ```
+
+    **In the meantime, check this repositories:**
+
+    <https://github.com/edwardcdev/recipe-app-backend>
+
+    <https://github.com/prakash-s-2210/mern-recipe-book-app/tree/master>
+
+    <https://github.com/alviandooo/backend-recipe-app>
+
+    <https://github.com/shelbyyy16/recipe-app-backend/>
+
+    <https://github.com/EBEREGIT/Recipe-App-Backend/tree/backend>
 
 Thank you!
