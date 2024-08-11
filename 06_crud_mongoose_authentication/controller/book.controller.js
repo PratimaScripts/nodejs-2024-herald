@@ -1,6 +1,29 @@
 const bookModel = require("../models/books.model");
 const userModel = require("../models/users.model");
 
+const getBooks = async (req, res) => {
+  try {
+    const books = await bookModel.find();
+    res.status(200).json({ success: true, books, totalBooks: books.length });
+  } catch (err) {
+    res.status(400).json({ success: false, error: err.message });
+  }
+};
+
+const getParticularBook = async (req, res) => {
+  try {
+    const { id } = req.params;
+    // database query
+    const book = await bookModel.findById(id);
+    if (!book) {
+      return res.status(404).json({ message: "Book not found" });
+    }
+    res.status(200).json({ success: true, book });
+  } catch (err) {
+    res.status(500).json({ success: false, error: err.message });
+  }
+};
+
 const createBook = async (req, res) => {
   try {
     const { title, author, genre, available } = req.body;
@@ -11,10 +34,6 @@ const createBook = async (req, res) => {
   }
 };
 
-/**
- * route: book/search
- * target: to search for books by genre
- */
 const searchBook = async (req, res) => {
   try {
     const genres = req.query.genre;
@@ -32,10 +51,44 @@ const searchBook = async (req, res) => {
   }
 };
 
-/**
-* route: book/getFavouriteBooks
-* target: get detailed favourite book lists
-*/
+const updateBook = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const book = await bookModel.findByIdAndUpdate(id, req.body, {
+      new: true,
+      runValidators: true,
+    });
+    if (!book) {
+      return res.status(404).json({ success: true, message: "Book not found" });
+    }
+    res.status(200).json({ success: true, message: "Book data updated", book });
+  } catch (err) {
+    res.status(500).json({ success: false, error: err.message });
+  }
+};
+
+//delete req
+const deleteBook = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const book = await bookModel.findByIdAndDelete(id);
+    if (!book) {
+      return res
+        .status(404)
+        .json({ success: false, message: "Book not found" });
+    }
+    res
+      .status(200)
+      .json({ success: true, message: "Book deleted successfully", book });
+  } catch (err) {
+    res.status(500).json({
+      success: false,
+      message: "An error occurred",
+      error: err.message,
+    });
+  }
+};
+
 const getFavouriteBooks = async (req, res) => {
   try {
     // Populate the favoriteBooks field 
@@ -54,11 +107,6 @@ const getFavouriteBooks = async (req, res) => {
   }
 };
 
-
-/**
-* route: book/addToFavourite
-* target: add a book's id to user's favourite list
-*/
 const addToFavourite = async (req, res) => {
   // bookid is to be send as payload, capture it with req.body
   const { bookId } = req.body;
@@ -94,4 +142,4 @@ const addToFavourite = async (req, res) => {
   }
 };
 
-module.exports = { createBook, searchBook, getFavouriteBooks, addToFavourite };
+module.exports = { createBook, searchBook, getFavouriteBooks, addToFavourite, deleteBook, updateBook, getBooks, getParticularBook };
